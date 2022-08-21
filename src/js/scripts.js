@@ -23,14 +23,13 @@ const camera = new THREE.PerspectiveCamera(
   1,
   1000
 )
+camera.position.set(-10,30,30)
 
 const orbit = new OrbitControls(camera, renderer.domElement)
 orbit.update()
 
 const axesHelper = new THREE.AxesHelper(5)
 scene.add(axesHelper)
-
-camera.position.set(-10,30,30)
 
 const boxGeometry = new THREE.BoxGeometry()
 const boxMaterial = new THREE.MeshBasicMaterial({ color : 0x00FF00 })
